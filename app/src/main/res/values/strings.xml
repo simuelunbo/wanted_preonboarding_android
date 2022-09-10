@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">wanted_preonboarding_android</string>
+    <string name="app_name">NewsApp</string>
+    <string name="category_title">Choose a category to\n start reading</string>
+    <string name="category">Category</string>
+    <string name="category_sports">Category - Sports</string>
+    <string name="category_entertainment">Category - Entertainment</string>
+    <string name="category_general">Category - General</string>
+    <string name="category_health">Category - Health</string>
+    <string name="category_science">Category - Science</string>
+    <string name="category_business">Category - Business</string>
+    <string name="category_technology">Category - Technology</string>
+    <string name="news_sample">American Sydney McLaughlin has shattered her own 400m hurdles world record at the world athletics championships, leaving fans lost for words.
+McLaughlin, the reigning Olympic champion, was the red-hot favourite and absolutely smashed her own world record by nearly a second in the final on Saturday in Eugene, Oregon.
+The 22-year-old was streaks ahead of the field well before the turn and left her world-class rivals in her wake to cross the line in 50.68sec.
+The incredible time chopped nearly a full second off her previous mark of 51.41, set at last year’s Tokyo Olympics.</string>
+
 </resources>
