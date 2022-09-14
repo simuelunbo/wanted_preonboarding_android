@@ -1,5 +1,14 @@
 <resources>
     <string name="app_name">NewsApp</string>
+
+    <!-- menu -->
+    <string name="menu_main_bottom_news">Top News</string>
+    <string name="menu_main_bottom_category">Categories</string>
+    <string name="menu_main_bottom_save">Saved</string>
+
+    <!-- category -->
+    <string name="category_news_toolbar_title">Category - %1$s</string>
+
     <string name="category_title">Choose a category to\n start reading</string>
     <string name="category">Category</string>
     <string name="category_sports">Category - Sports</string>
