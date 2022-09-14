@@ -3,7 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data></data>
+    <data>
+
+        <variable
+            name="vm"
+            type="com.simuelunbo.wanted_preonboarding_android.ui.MainViewModel" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -31,6 +36,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="14dp"
+                    android:text="@{vm.detailTitle}"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toStartOf="@+id/iv_star"
@@ -43,15 +49,18 @@
                     android:layout_width="24dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:src="@drawable/ic_empty_star"
+                    android:onClick="@{() -> vm.updateSavedState()}"
+                    android:src="@{vm.isStar() ? @drawable/ic_full_star : @drawable/ic_empty_star}"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@drawable/ic_empty_star" />
 
                 <TextView
                     android:id="@+id/tv_reporter_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="14dp"
+                    android:text="@{vm.detailAuthor}"
                     android:textColor="@color/black"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_news_title"
@@ -63,6 +72,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="14dp"
+                    android:text="@{vm.detailElapsed}"
                     android:textColor="@color/gray"
                     app:layout_constraintStart_toEndOf="@+id/tv_reporter_name"
                     app:layout_constraintTop_toBottomOf="@+id/tv_news_title"
@@ -75,6 +85,7 @@
                     android:layout_marginTop="20dp"
                     android:background="@drawable/rectangle3"
                     android:scaleType="centerCrop"
+                    app:image="@{vm.detailThumbNail}"
                     app:layout_constraintTop_toBottomOf="@id/tv_news_publication"
                     tools:src="@tools:sample/backgrounds/scenic" />
 
@@ -82,8 +93,9 @@
                     android:id="@+id/tv_news_description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
                     android:layout_marginTop="16dp"
+                    android:text="@{vm.detailContent}"
+                    android:textColor="@color/black"
                     app:layout_constraintTop_toBottomOf="@+id/iv_news_image"
                     tools:text="American Sydney McLaughlin has shattered her own 400m hurdles world record at the world athletics championships, leaving fans lost for words.\n
                     \nMcLaughlin, the reigning Olympic champion, was the red-hot favourite and absolutely smashed her own world record by nearly a second in the final on Saturday in Eugene, Oregon. \n
