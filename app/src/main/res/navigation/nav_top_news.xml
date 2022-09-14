@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_top_news"
+    app:startDestination="@id/topNewsFragment">
+
+    <fragment
+        android:id="@+id/topNewsFragment"
+        android:name="com.simuelunbo.wanted_preonboarding_android.ui.top_news.TopNewsFragment"
+        android:label="TopNewsFragment"
+        tools:layout="@layout/fragment_news">
+        <action
+            android:id="@+id/action_topNewsFragment_to_newsDetailFragment"
+            app:destination="@id/newsDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsDetailFragment"
+        android:name="com.simuelunbo.wanted_preonboarding_android.ui.detail.NewsDetailFragment"
+        android:label="NewsDetailFragment"
+        tools:layout="@layout/fragment_news_detail">
+        <argument
+            android:name="news"
+            app:argType="com.example.domain.model.News" />
+    </fragment>
+</navigation>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_category"
+    app:startDestination="@id/categoriesFragment">
+
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.simuelunbo.wanted_preonboarding_android.ui.category.CategoriesFragment"
+        android:label="CategoriesFragment"
+        tools:layout="@layout/fragment_categories">
+        <action
+            android:id="@+id/action_categoriesFragment_to_categoryNewsFragment"
+            app:destination="@id/categoryNewsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsDetailFragment"
+        android:name="com.simuelunbo.wanted_preonboarding_android.ui.detail.NewsDetailFragment"
+        android:label="NewsDetailFragment"
+        tools:layout="@layout/fragment_news_detail">
+        <argument
+            android:name="news"
+            app:argType="com.example.domain.model.News" />
+        </fragment>
+    <fragment
+        android:id="@+id/categoryNewsFragment"
+        android:name="com.simuelunbo.wanted_preonboarding_android.ui.category.CategoryNewsFragment"
+        android:label="CategoryNewsFragment"
+        tools:layout="@layout/fragment_category_news">
+        <argument
+            android:name="category"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_categoryNewsFragment_to_newsDetailFragment"
+            app:destination="@id/newsDetailFragment" />
+    </fragment>
+</navigation>
