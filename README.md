@@ -47,7 +47,7 @@
 │       
 └── app
     ├── adapter
-		  │	  ├── diffutil
+    │	├── diffutil
     │   └── viewholder
     ├── base
     ├── model
